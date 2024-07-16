@@ -28,7 +28,7 @@ function display(movies) {
         
 
         var moviePoster = document.createElement('img');
-        moviePoster.src = `https://image.tmdb.org/t/p/w200${movie.poster_path}`;
+        moviePoster.src = `https://image.tmdb.org/t/p/w780${movie.poster_path}`;
         moviePoster.classList.add("movie-img")
         moviePoster.style.transition = "opacity 0.5s ease";
         movieElement.appendChild(moviePoster);
@@ -49,7 +49,7 @@ function display(movies) {
         imgElement.addEventListener('mouseover', () => {
             imgElement.style.opacity = 0; //Fade out
             setTimeout(() => {
-                imgElement.src = `https://image.tmdb.org/t/p/w200${movie.backdrop_path}`;
+                imgElement.src = `https://image.tmdb.org/t/p/w780${movie.backdrop_path}`;
                 imgElement.style.opacity = 1; //Fade in
             }, 500); //Delay matches the transition duration
             movieDetails.style.display = 'block'; //showing movie details
@@ -58,7 +58,7 @@ function display(movies) {
         imgElement.addEventListener('mouseout', () => {
             imgElement.style.opacity = 0; // Fade out
             setTimeout(() => {
-                imgElement.src = `https://image.tmdb.org/t/p/w200${movie.poster_path}`;
+                imgElement.src = `https://image.tmdb.org/t/p/w780${movie.poster_path}`;
                 imgElement.style.opacity = 1; //Fade in
             }, 500); //Delay matches the transition duration
             movieDetails.style.display = 'none'; //Hiding movie details
